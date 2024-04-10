@@ -11,8 +11,101 @@
   <body>
     <h1>Gina Clepper's Assignment 2!</h1>
     <div class="header">
-      <img src="pics/red-panda.jpg" />
-      <p>Here is all the documentation for assignment 2!</p>
+      <img src="pics/a2-pics/nice-angle.jpg" alt="A sphere made out of laser-cut cardboard lily-pads."/>
+      <p>Assignment: Create a parametric model using Grasshopper and use it to design a physical model with 30 laser-cut parts that clip together.</p>
     </div>
+
+    <br></br>
+    I decided to make a parametric version of my Assignment 1, with the following small changes:
+    <ul>
+      <li>Improve tolerance so fit is slightly less snug</li>
+      <li>Use fillets to make slot insertion easier</li>
+      <li>Support construction in more than the x-y plane</li>
+    </ul>
+    I hoped that with these changes, the construction kit would be more fun to construct than in v1, where it was somewhat laborious to slot pieces together and where the possible configurations were fairly limited. I decided to do away with the lily flower connector pieces from v1 and instead allow lilypads to slot with each other and serve as the connectors.
+
+    <br></br>
+    In order to get aquainted with Grasshopper, I challenged myself to use Grasshopper components alone (not other manipulations in Rhino) to re-design my lilypad shape. I was successful in this with the exception of filleting the slots, which I'll discuss later.
+
+    <br></br>
+    <h2>Modeling</h2>
+
+    <br></br>
+    <img src="pics/a2-pics/ghp.png" width="100%" alt="A Grasshopper program that generates lilypad shapes with parameters lilypad radius, divot width, and cardboard thickness."/>
+
+    <br></br>
+    I chose three parameters to be user-input (grouped in green in the Grasshopper program above):
+    <ul>
+      <li>Lilypad radius (min: 1")</li>
+      <li>Divot width (a percentage of the widest possible divot that doesn't interfere with the slots)</li>
+      <li>Cardboard width</li>
+    </ul>
+    I assumed a set slot depth (0.4", same as in v1 of the construction kit).
+    
+    Using these parameters, I re-created the lilypad shape in three steps (in purple above):
+    <ol>
+      <li>Creating a circle</li>
+      <li>Removing triangular divot</li>
+      <li>Removing slots</li>
+    </ol>
+    
+    The final result, labeled "BAKE ME" (in blue), is what the user bakes and cuts.
+
+    <br></br>
+    I also tried to implement fillets with a fixed radius:
+
+    <br></br>
+    <img src="pics/a2-pics/ghp-fillet-close-up.png" width="100%" alt="A Grasshopper program that adds fillets to particular corners of a shape."/>
+
+    <br></br>
+    However, while my filleting code yielded visually correct-looking fillets, the path involved some concealed duplication, which I only realized when the laser cutter began retracing its path. I ended up doing only this filleting step in Rhino without Grasshopper.
+
+    <br></br>
+    The resulting shape:
+    <br></br>
+    <img src="source/src-a2/lilypad-MEDIUM66.svg" width="50%" alt="A lilypad shape generated using Grasshopper."/>
+
+    <br></br>
+    <h2>Fabrication</h2>
+
+    <br></br>
+    I used the same kind of cardboard as in v1, so I already had a good set of thickness measurements. I did, however, use my slot gauge designed in Assignment 1 to select a slightly wider slot size that would still grip the slotted piece without being as snug as in the previous version:
+
+    <br></br>
+    <img src="pics/a2-pics/lilypad-lilypad.jpg" width="50%" alt="Two cardboard lilypads that slot together at a right angle."/>
+
+    <br></br>
+    Now that I had adjusted the slot size so that lilypads could slot with other lilypads, I was able to make some fun spherical shapes:
+
+    <br></br>
+    <img src="pics/a2-pics/head-on.jpg" width="50%" alt="A sphere made out of laser-cut cardboard lily-pads."/>
+
+    <br></br>
+    Here is a 30-piece construction:
+
+    <br></br>
+    <img src="pics/a2-pics/30-piece.jpg" width="50%" alt="A construction of 30 lilypad-shaped pieces slotted together."/>
+
+    <br></br>
+    <a href="pics/a2-pics/shake-test-a2.mp4">And here is evidence of it surviving another shake test!</a>
+
+    <br></br>
+    <h2>Notes</h2>
+
+    <br></br>
+    Cardboard thickness: 0.04" on average
+
+    <br></br>
+    Slot tolerance: 0.035"
+
+    <br></br>
+    Settings: Power 100%, Speed 15%, Pulse 50%
+    
+    <br></br>
+    <a href="source/src-a2/Lilypad.gh">Source file: Grasshopper</a>
+
+    <br></br>
+    <a href="source/src-a2/lilypad-parametric-clean.3dm">Source file: Rhino</a>
+
   </body>
 </html>
