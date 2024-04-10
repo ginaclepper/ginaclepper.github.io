@@ -29,25 +29,29 @@
 
     <br></br>
     <h2>Modeling</h2>
-
-    <br></br>
     <img src="pics/a2-pics/ghp.png" width="100%" alt="A Grasshopper program that generates lilypad shapes with parameters lilypad radius, divot width, and cardboard thickness."/>
 
     <br></br>
-    I chose three parameters to be user-input (grouped in green in the Grasshopper program above):
-    <ul>
-      <li>Lilypad radius (min: 1")</li>
-      <li>Divot width (a percentage of the widest possible divot that doesn't interfere with the slots)</li>
-      <li>Cardboard width</li>
-    </ul>
-    I assumed a set slot depth (0.4", same as in v1 of the construction kit).
-    
-    Using these parameters, I re-created the lilypad shape in three steps (in purple above):
+    I re-created the lilypad shape in three steps (grouped in purple in the Grasshopper program above):
     <ol>
       <li>Creating a circle</li>
       <li>Removing triangular divot</li>
       <li>Removing slots</li>
     </ol>
+
+    <br></br>
+    I chose three parameters to be user-input (grouped in green in the Grasshopper program above):
+    <ul>
+      <li>Lilypad radius (min: 1")</li>
+      <img src="pics/a2-pics/param-radius.gif" width="50%" alt="Animation of lilypad radius changing."/>
+      <li>Divot width (a percentage of the widest possible divot that doesn't interfere with the slots)</li>
+      <img src="pics/a2-pics/param-divot.gif" width="50%" alt="Animation of lilypad divot changing."/>
+      <li>Cardboard width</li>
+      <img src="pics/a2-pics/param-slot.gif" width="50%" alt="Animation of width of slot in lilypad changing."/>
+    </ul>
+
+    <br></br>
+    I assumed a set slot depth (0.4", same as in v1 of the construction kit).
     
     The final result, labeled "BAKE ME" (in blue), is what the user bakes and cuts.
 
@@ -65,10 +69,7 @@
     <br></br>
     <img src="source/src-a2/lilypad-MEDIUM66.svg" width="50%" alt="A lilypad shape generated using Grasshopper."/>
 
-    <br></br>
     <h2>Fabrication</h2>
-
-    <br></br>
     I used the same kind of cardboard as in v1, so I already had a good set of thickness measurements. I did, however, use my slot gauge designed in Assignment 1 to select a slightly wider slot size that would still grip the slotted piece without being as snug as in the previous version:
 
     <br></br>
@@ -91,8 +92,6 @@
 
     <br></br>
     <h2>Notes</h2>
-
-    <br></br>
     Cardboard thickness: 0.04" on average
 
     <br></br>
