@@ -11,8 +11,118 @@
   <body>
     <h1>Gina Clepper's Assignment 3!</h1>
     <div class="header">
-      <img src="pics/red-panda.jpg" />
-      <p>Here is all the documentation for assignment 3!</p>
+      <img src="pics/a3-pics/action.gif" alt="A clear tube being 3D printed"/>
+      <p>Assignment: 3D print shapes with specified attributes and settings. Then, 3D print 15 clips that securely connect cardboard.</p>
     </div>
+
+    <br></br>
+    <h2>Basic Shapes</h2>
+
+    Timings are ballpark:
+
+    <br></br>
+    A 2cm cube with the standard "low quality" settings:
+    <ul>
+      <li>Time: about 19 minutes</li>
+      <li>Height: 19.72mm</li>
+      <li>Width: 20.07 mm</li>
+      <li>Depth: 20.08 mm</li>
+    </ul>
+    Adhesion issues resulted in one bad corner (slightly lifted).
+
+    <br></br>
+    A 2cm cube with the standard "standard quality" settings:
+    <ul>
+      <li>Time: about 24 minutes</li>
+      <li>Height: 19.78 mm</li>
+      <li>Width: 19.99 mm</li>
+      <li>Depth: 20.02 mm</li>
+    </ul>
+    This cube turned out great!
+    
+    <br></br>
+    A 2cm cube with the standard "super quality" settings:
+    <ul>
+      <li>Time: about 48 minutes</li>
+      <li>Height: 19.90 mm</li>
+      <li>Width: 19.99 mm</li>
+      <li>Depth: 19.98 mm</li>
+    </ul>
+    The back two corners were slightly lifted; I started doing between-print bed cleanings after that.
+
+    <br></br>
+    A 2 cm cube with a concentric top and bottom layer and your favorite print setting from the previous cubes:
+    <ul>
+      <li>Time: about 24 minutes</li>
+      <li>Height: 20.09 mm</li>
+      <li>Width: 20.08 mm</li>
+      <li>Depth: 20.13 mm</li>
+    </ul>
+    I used the "Draft" profile (standard quality) for this print and the following prints. I liked the look of the concentric top and bottom.
+
+    <br></br>
+    A tube 3cm in diameter and 3cm high with a single extrusion wall thickness:
+    <ul>
+      <li>Time: about 33 minutes</li>
+      <li>Height: 29.83 mm</li>
+      <li>Outer radius: 29.85 mm</li>
+    </ul>
+
+    <br></br>
+    A tube 3cm in diameter and 3cm high with a double extrusion wall thickness and random z-seam alignment:
+    <ul>
+      <li>Time: about 38 minutes</li>
+      <li>Height: 29.95 mm</li>
+      <li>Outer radius: 29.91 mm</li>
+    </ul>
+    The random z-seam alignment prevents the formation of a single indented seam.
+
+    <br></br>
+    A cylinder 3cm in diameter with special mode "spiralize outer contour":
+    <ul>
+      <li>Time: about 14 minutes</li>
+      <li>Height: 29.97 mm</li>
+      <li>Outer radius: 29.90 mm</li>
+    </ul>
+    This spiralize outer contour setting creates a vase-like shape with a bottom and a delicately thin (flexible) vase-like shape.
+
+    <br></br>
+    A cylinder 3cm in diameter printed on its side with supports on.
+    <ul>
+      <li>Time: about 36 minutes</li>
+      <li>Height: 30.07 mm</li>
+      <li>Radius (measured normal to print bed): 29.60 mm</li>
+      <li>Radius (measured parallel to print bed): 30.06 mm</li>
+    </ul>
+    I ran this print using the extra fast (0.3 mm) profile and chose tree-type supports. Less support material was needed than I expected.
+
+    <br></br>
+    <img src="pics/a3-pics/family.jpg" width="50%" alt="A family of basic shapes, 3D printed."/>
+
+    <br></br>
+    <h2>Cardboard Clips</h2>
+
+    I designed some really basic clips to attach 0.114 inch thick cardboard pieces together in the same plane. I rounded the slots for easy assembly and made the slot gap slightly smaller than the measured cardboard, knowing that the cardboard had some give.
+
+    <br></br>
+    <img src="pics/a3-pics/clip_deformation.jpg" width="33%" alt="The double-sided clip deforming when one piece of cardboard is slotted in"/>
+
+    <br></br>
+    Source files:
+
+    <br></br>
+    <a href="source/src-a3/cube.3dm">Cube</a>
+    
+    <br></br>
+    <a href="source/src-a3/cylinder.3dm">Cylinder</a>
+
+    <br></br>
+    <a href="source/src-a3/cyl_sideways.3dm">Cylinder</a>
+
+    <br></br>
+    <a href="source/src-a3/tube.3dm">Tube</a>
+
+    <br></br>
+    <a href="source/src-a3/many simple slots.3dm">Clips</a>
   </body>
 </html>
