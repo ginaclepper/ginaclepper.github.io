@@ -11,8 +11,56 @@
   <body>
     <h1>Gina Clepper's Assignment 4!</h1>
     <div class="header">
-      <img src="pics/red-panda.jpg" />
-      <p>Here is all the documentation for assignment 4!</p>
+      <img src="pics/a4-pics/complete_sqr.jpg" alt="A shiny copper cube about one inch wide with puzzle-like joins."/>
+      <p>Assignment: Design and mill a box out of FR1 on the Othermill, using boxjoints, tabs, or another joining method.</p>
     </div>
+
+    <h2>Measurements</h2>
+    1.54 mm seemed to be the most common FR1 depth, though there was some variance from board to board.
+    
+    <h2>Design</h2>
+
+    I drafted a simple box with slots the width of the FR1:
+    <img src="pics/a4-pics/side.svg" width="50%" alt="Vector sketch in Rhino of box side with puzzle-like slots and tabs."/>
+
+    I estimated 0.1mm offset for each of the slots in my design.
+
+    <h2>Using the Mill</h2>
+
+    <p>Measure with tape before adhering to bed!!! z offset of 2</p>
+
+    <img src="pics/a4-pics/toolpath_motion.gif" width="50%" alt="The Othermill in action, milling some FR1."/>
+
+    <img src="pics/a4-pics/one_side_sqr.jpg" width="50%" alt="A puzzle-like coppery piece, about one inch by one inch, milled out of FR1."/>
+
+    <p>I used the planned offset feature in the Bantam tool software to lay out multiple box sides on the available area of FR1:</p>
+    <img src="pics/a4-pics/laid_out.jpg" width="33%" alt="A piece of FR1 in an Othermill desktop milling machine, with outlines of puzzle-like pieces already milled and removed."/>
+
+    <p>The sides fit together well, but I needed more pieces to be sure there wasn't an accumulation of bad tolerance errors:</p>
+    <img src="pics/a4-pics/fits.jpg" width="33%" alt="Three sides of a copper box, fitted together with slots and tabs."/>
+
+    <p>I needed specialized top and bottom pieces for the box!</p>
+
+    <p>Box bottom:</p>
+    <img src="pics/a4-pics/bottom.svg" width="33%" alt="Vector sketch in Rhino of box bottom with puzzle-like slots."/>
+
+    <p>Box top:</p>
+    <img src="pics/a4-pics/top.svg" width="33%" alt="Vector sketch in Rhino of top bottom with puzzle-like tabs."/>
+
+    <p>It fits!</p>
+    <img src="pics/a4-pics/complete_sqr.jpg" width="50%" alt="A shiny copper cube about one inch wide with puzzle-like joins."/>
+
+    <h2>Notes/Lessons Learned</h2>
+    <p>The origin of the Othermill is in the front left corner!</p>
+
+    <p>The Bantam software doesn't seem to like a blank gerber file for engraving. I worked around this, but I'm certain there's a better way!</p>
+
+    <p>Dogbones trigger a warning about needing a smaller tool. I ignored this warning without issue -- but should I have?</p>
+
+    <p>KiCAD doesn't like overlapping paths, and possibly may not like hidden layers that contain overlapping paths</p>
+
+    <p>Needed to export DXF with “lines” scheme (I did most recent, 2018) for it to show up as having graphic content in KiCAD</p>
+
+    <p>Thank you to fellow first-time Othermillers John and Jillian at the MILL for the company and troubleshooting!</p>
   </body>
 </html>
