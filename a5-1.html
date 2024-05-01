@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+    <title>Gina Clepper's HCDE 533 Digital Fabrication Page!</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Gina Clepper's Assignment 5 Part 1!</h1>
+    <div class="header">
+      <img src="pics/a5-1-pics/a5 pt1 thumb.jpg" alt=""/>
+      <p>Assignment: combine multiple existing meshes into a new, printable mesh. Also, get started on a lamp!</p>
+    </div>
+
+    <p>Idea 1: waving cat with human hand, using Thingi10K assets:</p>
+    <img src="pics/a5-1-pics/cat 1.PNG" width="50%" alt=""/>
+
+    <!-- CAT GIF HERE -->
+
+    <p><br>Problem: the original cat mesh is bad!</p>
+    <img src="pics/a5-1-pics/bad cat 1.PNG" width="50%" alt=""/>
+
+    <p><br>Problem: Still bad after MeshRepair!</p>
+    <img src="pics/a5-1-pics/bad cat 2.PNG" width="50%" alt=""/>
+
+    <p><br>New plan: octopus tentacle with splash, both also Thingi1K assets:</p>
+    <img src="pics/a5-1-pics/octo 1.png" width="50%" alt=""/>
+
+    <p><br>Rudimentary scaling, moving, and rotating yields something close but the tentacle sticks out oddly from the splash:</p>
+    <img src="pics/a5-1-pics/octo 2 hi.png" width="50%" alt=""/>
+
+    <p><br>I made a cylinder to MeshBooleanDifference with that part of the tentacle:</p>
+    <img src="pics/a5-1-pics/octo 3 cyl.png" width="50%" alt=""/>
+
+    <p><br>...yielding a better combo of tentacle and splash, with the mesh still closed, valid, and "good":</p>
+    <img src="pics/a5-1-pics/octo 4 final.png" width="50%" alt=""/>
+
+    <p><br>Still closed, valid, and "good" after MeshBooleanUnion-ing the two meshes:</p>
+    <img src="pics/a5-1-pics/octo 5 good.png" width="50%" alt=""/>
+
+    <p><br>Generating needed support in Cura:</p>
+    <img src="pics/a5-1-pics/octo 6 support.png" width="50%" alt=""/>
+
+    <p><br>Printing with LOTs of support:</p>
+    <img src="pics/a5-1-pics/print 1 bed.jpg" width="50%" alt=""/>
+
+    <p><br>After much surgery with pliers, it looks good!</p>
+    <img src="pics/a5-1-pics/print 2 fwd.jpg" width="50%" alt=""/>
+
+    <p><br>Support carnage:</p>
+    <img src="pics/a5-1-pics/print 4 support sqr.jpg" width="50%" alt=""/>
+
+    <p><br>Source files: , <a href="source/src-a5-1/combo_3.3dm">Rhino file for tentacle + splash</a></p>
+
+    <p><br>References: <a href="source/src-a5-1/OcotoArm-v3-Final-11mmCase.stl">original tentacle asset</a>, <a href="source/src-a5-1/Splash_Pen_holderV04.stl">original splash asset</a></p>
+  </body>
+</html>
