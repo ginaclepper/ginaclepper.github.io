@@ -11,8 +11,179 @@
   <body>
     <h1>Gina Clepper's Assignment 6!</h1>
     <div class="header">
-      <img src="pics/red-panda.jpg" />
-      <p>Here is all the documentation for assignment 6!</p>
+      <img src="pics/a6-pics/thumbnail a6.jpg" />
+      <p>Assignment: design and fabricate a two-part silicone mold, and use it to cast four identical parts in plaster. 3D print a mold for the (silicone) mold.</p>
     </div>
+
+    <h2><br>Object Design</h2>
+
+    <p>I've been using Rhino exclusively for CAD but haven't experimented much with organic shapes. I decided to take this opportunity to explore the "SubD" tools. It was time to make...a wiggly bowl.</p>
+
+    <img src="pics/a6-pics/sketches.png" alt="" style="width:100%">
+
+    <p><br> As I got acquainted with SubD, I realized that the mechanism for combining shapes was quite different from the world of NURBS. I ended up creating SubD 3D shapes like spheres and rounded cylinders, deleting certain faces to create open shapes, then using <code>Bridge</code> to connect open faces. I found I needed to create shapes with the same number of edges at the junctures of interest; I did this by specifying <code>AroundFaces</code> when creating the objects.</p>
+    
+    <p><br> To manipulate shapes, I selected particular faces or edges (<code>Shift+Ctrl+Click</code>) and pushed or pulled them, which also affected adjacent faces and edges. The <code>Smooth</code> command was also useful for this.</p>
+
+    <div class="row">
+      <div class="column2">
+        <img src="pics/a6-pics/bowl 1 subd.gif" alt="" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="pics/a6-pics/bowl 2 smooth.png" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <p><br>To be useful on a flat tabletop, my bowl would need a flat bottom. I concatenated a cylindrical base and hemispherical top, used <code>Fill</code> to close up the top, then used <code>Subdivide</code> to create smaller partitions of that top which I could push in to make a concave shape</p>
+
+    <div class="row">
+      <div class="column2">
+        <img src="pics/a6-pics/bowl 3 flat bottom.gif" alt="" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="pics/a6-pics/bowl 4 subdivide.gif" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <p><br>I scaled down to a 3 inch diameter bowl 1.5 inches tall to conserve plaster. The resulting bowl was a little thin at the wavy edged top, which was a little worrisone. I wanted my plaster piece to be at least 5mm thick in most places to be sturdy. But I liked the look so much I decided to proceed. (Ultimately, I would end up cutting off some of the delicate wavy edge to ease in mold design, addressing some of this concern.)</p>
+
+    <p><br>With SubD shapes, you can toggle between smooth and flat modes using <code>Tab</code>. I found this helpful for understanding my shape.</p>
+
+    <div class="row">
+      <div class="column2">
+        <img src="pics/a6-pics/bowl 5 final.png" alt="" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="pics/a6-pics/bowl 6 toggle.png" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <h2><br>Mold Design</h2>
+
+    <h3>Configurations for a multi-part mold</h3>
+
+    <p>I had several options for how to cast these bowls with multi-piece molds. On the left (red) is a design for a longitudinal parting line. I decided instead to go with the design on the right (blue), a latitudinal parting line. One part of the mold creates the bowl exterior shape and has an opening for plaster to be poured in at the foot of the bowl. The other mold creates the interior wavy shape of the bowl. The pink sketches show the corresponding 3D printed molds needed.</p>
+
+    <div class="row">
+      <div class="column2">
+        <img src="pics/a6-pics/config 1 side.png" alt="" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="pics/a6-pics/config 2a bottom.png" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <p>The molds are stacked on top of one another and plaster poured in the top. Looking at example molds, I realized this might be atypical, but it seemed okay to me -- a level liquid surface should yield a level bowl bottom. I did sanity checks along the way -- was there an opening to pour in each mold, and an opening for the casted object to escape? Could it be 3D printed without excessive or difficult to remove supports?</p>
+
+    <img src="pics/a6-pics/config 2b pouring.png" alt="" style="width:100%">
+
+    <h3><br>CAD for mold</h3>
+
+    <p>To get the curve of the top of the bowl's wavy edge, I used <code>Silhouette</code> in the Top View (<code>InteriorEdges=No</code>). I created a mold boundary at least 1/2 inch thick around all sides. Following <a href="https://www.instructables.com/3D-Printing-for-Two-Part-Silicone-Molds/">this tutorial</a>, I used <code>Line</code> and <code>Sweep2</code> to generate a parting surface.</p>
+
+    <div class="row">
+      <div class="column3">
+        <img src="pics/a6-pics/cad 1 parting line.png" alt="" style="width:100%">
+      </div>
+      <div class="column3">
+        <img src="pics/a6-pics/cad 2 mold boundary.png" alt="" style="width:100%">
+      </div>
+      <div class="column3">
+        <img src="pics/a6-pics/cad 3 parting surface.png" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <p><br>With the <code>Sphere</code> and <code>Mirror</code> commands, I made some registration keys. However, extruding this wavy shape and creating a valid, closed, printable mesh proved an elusive task for me! I spent so many hours wrestling Rhino, stubbornly trying to understand how to perfectly maintain both the wavy top edge and the concave bowl shape.</p>
+
+    <div class="row">
+      <div class="column2">
+        <img src="pics/a6-pics/cad 4 registration keys.png" alt="" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="pics/a6-pics/cad 5 extrusion.png" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <p><br>After too many hours of this, I surrendered to my Rhino naivety and made the top of my bowl flat. I lost the battle but gained a printable object after many Boolean operations -- yay!</p>
+
+    <div class="row">
+      <div class="column2">
+        <img src="pics/a6-pics/cad 6a interior.png" alt="" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="pics/a6-pics/cad 6b exterior.png" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <h2><br>Fabrication</h2>
+
+    <h3>3D printing a mold for silicone</h3>
+
+    <p>My slicer settings were fairly standard, save using Concentric Top and Bottom fill patterns. I figured these patterns would show on the finished silicone mold, so they might as well match the curvature of the object. With some possibly suspect setting choices, these printed in 4 hours apiece.</p>
+
+    <div class="row">
+      <div class="column2">
+        <img src="pics/a6-pics/cura 1a interior.png" alt="" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="pics/a6-pics/cura 1b exterior.png" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column2">
+        <img src="pics/a6-pics/print 1 ext black.jpg" alt="" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="pics/a6-pics/print 2 int.jpg" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <h3><br>Casting silicone</h3>
+
+    <p>I poured in the silicone and let it cure for 10 hours. I was afraid to bully the wiggly silicone too much, so at first I struggled to remove it from its 3D printed cage, but when I got brave about it, I was able to pry it out without any tearing. It reminds me of a vintage jello mold!</p> 
+
+    <img src="pics/a6-pics/silicon 1.jpg" alt="" style="width:50%">
+
+    <div class="row">
+      <div class="column2">
+        <img src="pics/a6-pics/silicon 2a.jpg" alt="" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="pics/a6-pics/silicon 2b.jpg" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <h3><br>Casting plaster</h3>
+
+    <p>I bound my mold in rubber bands to try to prevent leakage. Each cast took between half an hour and an hour to harden enough for removal.</p>
+
+    <img src="pics/a6-pics/silicon 3.jpg" alt="" style="width:50%">
+
+    <h2><br>Final Product</h2>
+
+    <p>I now have so many little bowls for my tchotchkes.</p>
+
+    <div class="row">
+      <div class="column3">
+        <img src="pics/a6-pics/tada 1 still.jpg" alt="" style="width:100%">
+      </div>
+      <div class="column3">
+        <img src="pics/a6-pics/tada 2 gif.gif" alt="" style="width:100%">
+      </div>
+      <div class="column3">
+        <img src="pics/a6-pics/thumbnail a6.jpg" alt="" style="width:100%">
+      </div>
+    </div>
+
+    <img src="pics/a6-pics/4 bowls.jpg" alt="" style="width:100%">
+      </div>
+
+    <h2>Notes</h2>
+
+    <p>Thank you to Emily for recommending <a href="https://www.instructables.com/3D-Printing-for-Two-Part-Silicone-Molds/">this tutorial</a> on mold-making in Rhino.</p>
+
+    <p><br>Source file (.STLs): <a href="source/src-a6/interior SHORTER.stl">interior mold</a>, <a href="source/src-a6/exterior.stl">exterior mold</a></p>
+
   </body>
 </html>
