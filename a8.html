@@ -15,13 +15,14 @@
       <p>Assignment: Create a final project incorporating 4+ techniques from class!</p>
     </div>
 
-    <p><br>For my final assignment, I made the tactile toy box proposed in <a href="a8.html">A7</a>. The box is laser-cut with an integrated hinge. On one side is a skeleton puzzle game, where you press fit 3D-printed bone puzzle pieces into their proper positions. 3D-printed split rivets on the backs of the bones fit into holes in the box and click the pieces into place.</p>
+    <p><br>For my final assignment, I made the two-sided tactile toy box proposed in <a href="a8.html">A7</a>. The box is laser-cut with an integrated hinge. On one side is a skeleton puzzle game, where you press fit 3D-printed bone puzzle pieces into their proper positions. 3D-printed split rivets on the backs of the bones fit into holes in the box and click the pieces into place.</p>
+
+    <p><br>On the opposite outer face of the box is an organ puzzle game, where you place squishy organ puzzle pieces into the proper cavities.</p>
 
     <img src="pics/a8-pics/FINAL_organstemp.jpg" alt="A laser cut torso with cavities for plush organ pieces to fit inside." style="width:50%">
 
-    <p>On the other side of the box is an organ puzzle game, where you place squishy organ puzzle pieces into the proper cavities.</p>
 
-    <h2><br>Rattle My Bones</h2>
+    <h2><br>First Puzzle: Rattle My Bones</h2>
 
     <h3><br>Rivet-ing Iterations</h3>
 
@@ -41,11 +42,90 @@
 
     <p>Source (right): P and H Metal</p>
 
+    <p><br>I wanted a mechanism that could (1) insert into a round hole without too much effort, especially when difficult to see, being on the underside of the puzzle piece, (2) click into place, holding the piece into the wood if the box were to be turned upside down, (3) be easily removed by fingers. I tried several iterarions of a 3D split rivet design:</p>
+
+    <table><thead>
+      <tr>
+        <th>Name</th>
+        <th>Silhouette</th>
+        <th>Diam of peg</th>
+        <th>Flush v Washer</th>
+        <th>Split depth</th>
+        <th>Split width</th>
+      </tr></thead>
+    <tbody>
+      <tr>
+        <td>A1</td>
+        <td>Classic split rivet</td>
+        <td>Big (10 mm)</td>
+        <td>Flush</td>
+        <td>To bottom of wood</td>
+        <td>To 1mm leg</td>
+      </tr>
+      <tr>
+        <td>A2</td>
+        <td>Classic split rivet</td>
+        <td>Small (6 mm)</td>
+        <td>Washer</td>
+        <td>To bottom of wood</td>
+        <td>Less V like and more U-like</td>
+      </tr>
+      <tr>
+        <td>A3</td>
+        <td>Click curve</td>
+        <td>Small (6 mm)</td>
+        <td>Washer</td>
+        <td>To bottom of wood</td>
+        <td>Thinner U</td>
+      </tr>
+      <tr>
+        <td>A4</td>
+        <td>Click curve</td>
+        <td>Small (6 mm)</td>
+        <td>Washer</td>
+        <td>To top of wood</td>
+        <td>Thinner U</td>
+      </tr>
+      <tr>
+        <td>A5</td>
+        <td>Click curve</td>
+        <td>Smaller (5.5mm)</td>
+        <td>Taller washer</td>
+        <td>To top of wood</td>
+        <td>Thinner U</td>
+      </tr>
+      <tr>
+        <td>A6</td>
+        <td>Click curve</td>
+        <td>Smaller (5.7mm)</td>
+        <td>Taller washer</td>
+        <td>To top of wood</td>
+        <td>Thinner U</td>
+      </tr>
+    </tbody></table>
+
+    <p><br>In the end, I realized that TINY bumps on the exterior of the rivet were enough to provide a solid click:</p>
+
     <img src="pics/a8-pics/RIVET_diag.png" alt="A model of a split rivet with bumps on the outside of the legs to hold the rivet in place." style="width:100%">
 
-    <h3>Designing the Skeleton</h3>
+    <p><br>The longevity of this mechanism is yet to be tested, but in the short term it really does the trick!</p>
+
+    <img src="pics/a8-pics/RIVET_pic.jpg" alt="A 3D-printed split rivet." style="width:50%">
+
+
+    <h3><br>Designing the Skeleton</h3>
 
     <p>I used the Curve tool in Illustrator to manually trace over a referance image of a skeleton (Source: Wikimedia). This was a somewhat laborious step but allowed me to break the skeleton into puzzleable chunks that could conceal rivets on the back.</p>
+
+    <img src="pics/a8-pics/BONE_ai-01.png" alt="" style="width:50%">
+
+    <p>I used Rhino to place the rivets and extrude the bone shapes.</p>
+
+    <img src="pics/a8-pics/BONE_rhino.PNG" alt="" style="width:50%">
+
+    <p>The bones were printed, rivet side up, in PLA on an Ender in Dynamic Quality. In Cura, I set the bottom most layer to be a concentric pattern, because I found that most appealing for the top face of the skeleton.</p>
+
+    <img src="pics/a8-pics/BONE_cura.PNG" alt="" style="width:50%">
 
     <!-- Design
 
@@ -53,19 +133,7 @@
 
     Shake test -->
 
-    <h2><br>Box Time!</h2>
-
-    <img src="pics/a8-pics/BOX_ai.png" alt="" style="width:75%">
-
-    <p>Integrated hinge box design courtesy of <a href="https://boxes.hackerspace-bamberg.de/">boxes.py</a>, modified with elongated finger joints for a double-thick bottom layer.</p>
-
-    <!--Engraving
-
-    Settings -->
-
-    <p><br>Print settings: 100 Power, 5 Speed, Repeat Job Outline 3-4 times</p>
-
-    <h2><br>Get Organ-ized</h2>
+    <h2><br>Second Puzzle: Get Organ-ized</h2>
 
     <p>I had time to go for my stretch goal: a second puzzle game with squishy organs.</p>
 
@@ -84,30 +152,47 @@
     </p>
 
     <h3><br>Brains</h3>
+    <p>The most involved organ design was the silicone brain. I started with a brain model on Thingi10K:</p>
 
     <img src="pics/a8-pics/ORGAN_BRAIN_thingi.PNG" alt="" style="width:75%">
 
-    <img src="pics/a8-pics/ORGAN_BRAIN_print.jpg" alt="" style="width:75%">
+    <p>In Rhino, I cut off the back of the brain so it had a flat side, squashed the remainder to be a 2.5D version of a brain, then cut out the shape of the brain cavity I had already designed. Then, I created a mold to 3D print and pour silicone into:</p>
 
-    <img src="pics/a8-pics/ORGAN_BRAIN_cura.png" alt="" style="width:75%">
+    <div class="row">
+      <div class="column2">
+        <img src="pics/a8-pics/ORGAN_BRAIN_cura.png" alt="" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="pics/a8-pics/ORGAN_BRAIN_print.jpg" alt="" style="width:100%">
+      </div>
+    </div>
 
-    <!--Thingi10K
+    <!-- Flattening-->
 
-    Flattening-->
+    <h2><br>Box Time!</h2>
 
-    <h2><br>Improvements...</h2>
+    <img src="pics/a8-pics/BOX_ai.png" alt="" style="width:75%">
+
+    <p>Integrated hinge box design courtesy of the parametric design tool <a href="https://boxes.hackerspace-bamberg.de/">boxes.py</a>. My only modification was elongating the finger joints for a double-thick bottom layer, for the torso/organ cavities.</p>
+
+    <!--Engraving
+    Malleting-->
+
+    <p><br><b>Print settings</b>: 100 Power, 5 Speed, Repeat Job Outline 3-4 times</p>
+
+    <h2><br>Desired Improvements</h2>
 
     <p>
       <ul>
-        <li>No swivel, or swivel at joint</li>
-        <li>Rivet stronger, orthogonal layers</li>
-        <li>Support intestine piece without glue</li>
+        <li>The hands and feet only have one rivet apiece, and it's not located at the joint, so they swivel unnaturally. I'd like to move the rivets to the ankles and wrists so they can wiggle around but in a physically possible way.</li>
+        <li>The rivets are sufficient for normal use, but if you squeeze the legs together between your fingers enough, you can separate layers abd break them. My labmate Sam suggested I print the rivets such that the path of the filament extrusion goes up and down vertically along the rivet. I've been thinking about a two part bone-plus-rivet design, instead of an all-in-one, where the rivets fit permanently into the bones and can be printed on their sides.</li>
+        <li>The box is press-fit together without any glue, and the line dividing the small and large intestines is rather fragile. I'd like to adjust the design to include lines that cut across that open space so the length of thin wood dangling without support is smaller.</li>
       </ul>
     </p>
 
     <h2><br>Source files</h2>
-    <p><br><a href="source/src-a8/bones/">Bone .stls</a></p>
-    <p><br><a href="source/src-a8/brain mold.stl">Brain mold .stl</a></p>
-    <p><br><a href="source/src-a8/hinge box skeleton 3 torso.ai">Laser cut vector .ai</a></p>
+    <p><a href="source/src-a8/bones/">Bone .stls</a></p>
+    <p><a href="source/src-a8/brain mold.stl">Brain mold .stl</a></p>
+    <p><a href="source/src-a8/hinge box skeleton 3 torso.ai">Laser cut vector .ai</a></p>
   </body>
 </html>
